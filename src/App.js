@@ -6,11 +6,7 @@ const App = () => {
   
   return (
     <div>
-        {data.map((item,index) => (
-          <div key={index}>
-            {item.email}
-          </div>
-        ))}
+        
     </div>
   )
 }
