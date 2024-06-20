@@ -3,3 +3,10 @@
   padding: 0;
   box-sizing: 0;
 }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: aliceblue;
+  padding: 10px;
+}
