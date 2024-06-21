@@ -8,6 +8,7 @@ const App = () => {
     <div className='container'>
          <div className='faq-container'>
             <FaqComponent/>
+            <div className=""></div>
          </div>
     </div>
   )
