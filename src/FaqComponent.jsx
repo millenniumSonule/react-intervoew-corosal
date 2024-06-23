@@ -11,7 +11,8 @@ const FaqComponent = () => {
               {/* <p>{JSON.stringify(data[index].answer)}</p> */}
               {/* <p>{JSON.stringify(data[index].question)}</p> */}
               <div className='que-box'>
-                  {JSON.stringify(data[index].question)}
+                  {JSON.stringify(data[index].answer)}
+                  <button>{'>'}</button>
               </div>
             </div>
           ))}

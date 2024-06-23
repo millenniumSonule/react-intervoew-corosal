@@ -13,6 +13,7 @@
 
 .que-box {
   
+  display: flex;
   background-color: bisque;
   padding: 20px;
   margin: 10px
