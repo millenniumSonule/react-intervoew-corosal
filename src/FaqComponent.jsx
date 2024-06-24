@@ -12,7 +12,7 @@ const FaqComponent = () => {
               {/* <p>{JSON.stringify(data[index].question)}</p> */}
               <div className='que-box'>
                   {JSON.stringify(data[index].answer)}
-                  <button>{'>'}</button>
+                  <button>{'> '}</button>
               </div>
             </div>
           ))}
