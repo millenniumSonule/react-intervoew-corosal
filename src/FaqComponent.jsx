@@ -1,41 +1,33 @@
-import React, { useState } from 'react'
-import data from './data.json'
-import './App.css'
-const FaqComponent = () => {
+import React, { useState } from 'react';
+import data from './data.json';
+import './App.css';
 
-  const[isOpen,setOpen] = useState(0);
+const FaqComponent = () => {
+  const [isOpen, setOpen] = useState(null);
 
   const openAccordion = (index) => {
-   
-    setOpen(index);
-   
-  }
+    setOpen(isOpen === index ? null : index);
+  };
 
   return (
-    <div>
-     
-      <div style={{display:'flex', justifyContent:'center',alignItems:'center',flexDirection:'column'}}>
+    <div className="container">
+      <div className="faq-wrapper">
         {data.map((item, index) => (
-          <div key={index}>
-
-              <div className='que-box'>
-                  {JSON.stringify(data[index].question)}
-                  <button onClick={() =>openAccordion(index)}>{'>'}</button>
-              </div>
-               {
-                index===isOpen ? (
-                  <div className='answer-box'>
-                  {JSON.stringify(data[index].answer)}
-                  </div>
-                ): (
-                  <div></div>
-                )
-               }
+          <div key={index} className="faq-item">
+            <div className='que-box' onClick={() => openAccordion(index)}>
+              {item.question}
+              <button className="toggle-button">{isOpen === index ? '▲' : '▼'}</button>
             </div>
-          ))}
-        </div>
+            {index === isOpen && (
+              <div className='answer-box'>
+                {item.answer}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default FaqComponent
+export default FaqComponent;
