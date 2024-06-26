@@ -11,10 +11,16 @@
   padding: 10px;
 }
 
-.que-box {
-  
+.que-box{
   display: flex;
   background-color: bisque;
+  padding: 20px;
+  margin: 10px
+}
+
+.answer-box { 
+  display: flex;
+  background-color: grey;
   padding: 20px;
   margin: 10px
 }

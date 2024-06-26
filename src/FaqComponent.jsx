@@ -5,6 +5,12 @@ const FaqComponent = () => {
 
   const[isOpen,setOpen] = useState(0);
 
+  const openAccordion = (index) => {
+   
+    setOpen(index);
+   
+  }
+
   return (
     <div>
      
@@ -14,11 +20,17 @@ const FaqComponent = () => {
 
               <div className='que-box'>
                   {JSON.stringify(data[index].question)}
-                  <button>{'> '}</button>
+                  <button onClick={() =>openAccordion(index)}>{'>'}</button>
               </div>
-                <div className='answer-box'>
-                {JSON.stringify(data[index].answer)}
-                </div>
+               {
+                index===isOpen ? (
+                  <div className='answer-box'>
+                  {JSON.stringify(data[index].answer)}
+                  </div>
+                ): (
+                  <div></div>
+                )
+               }
             </div>
           ))}
         </div>
